@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "$(findmnt -n -o FSTYPE -T /)" = "btrfs" ]; then
+    eatmydata /usr/sbin/synaptic.distrib "$@"
+else
+    /usr/sbin/synaptic.distrib "$@"
+fi

@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+package_name=synaptic-eatmydata
+case "$1" in
+  install)
+if [ "$(dpkg-divert --list "/usr/sbin/synaptic")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/sbin/synaptic.distrib" --rename "/usr/sbin/synaptic"
+fi
+    ;;
+  upgrade)
+if [ "$(dpkg-divert --list "/usr/sbin/synaptic")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/sbin/synaptic.distrib" --rename "/usr/sbin/synaptic"
+fi
+;;
+esac
+exit 0

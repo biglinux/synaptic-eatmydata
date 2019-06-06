@@ -1,0 +1,5 @@
+9637682fe2138e938b83ae92834de41c  DEBIAN/preinst
+112771c5cfb1219ae4042df26c33a188  DEBIAN/postrm
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+45ba459ebdb8c11c0deff0464c50a2f2  DEBIAN/control
+78cb91fc985ee7be3528079feb6009e3  usr/sbin/synaptic

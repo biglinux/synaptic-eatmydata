@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+package_name=synaptic-eatmydata
+case "$1" in
+  remove)
+    dpkg-divert --package "$package_name" --rename --remove "/usr/sbin/synaptic"
+    ;;
+  purge)
+    dpkg-divert --package "$package_name" --rename --remove "/usr/sbin/synaptic"
+;;
+esac
+exit 0
