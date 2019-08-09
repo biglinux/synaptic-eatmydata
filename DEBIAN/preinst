@@ -7,12 +7,24 @@ if [ "$(dpkg-divert --list "/usr/sbin/synaptic")" = "" ]
 then
     dpkg-divert --package "$package_name" --divert "/usr/sbin/synaptic.distrib" --rename "/usr/sbin/synaptic"
 fi
+
+if [ "$(dpkg-divert --list "/usr/share/locale/pt_BR/LC_MESSAGES/synaptic.mo")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/share/locale/pt_BR/LC_MESSAGES/synaptic.mo.distrib" --rename "/usr/share/locale/pt_BR/LC_MESSAGES/synaptic.mo"
+fi
     ;;
   upgrade)
 if [ "$(dpkg-divert --list "/usr/sbin/synaptic")" = "" ]
 then
     dpkg-divert --package "$package_name" --divert "/usr/sbin/synaptic.distrib" --rename "/usr/sbin/synaptic"
 fi
+
+if [ "$(dpkg-divert --list "/usr/share/locale/pt_BR/LC_MESSAGES/synaptic.mo")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/share/locale/pt_BR/LC_MESSAGES/synaptic.mo.distrib" --rename "/usr/share/locale/pt_BR/LC_MESSAGES/synaptic.mo"
+fi
 ;;
 esac
 exit 0
+
+

@@ -1,10 +1,10 @@
 Package: synaptic-eatmydata
-Version: 1.0.0-1big1
+Version: 1.0.0-1big2
 Depends: eatmydata, synaptic
 Architecture: all
 Maintainer: Bruno Goncalves <www.biglinux.com.br>
 Section: admin
 Priority: optional
-Installed-Size:20
+Installed-Size:296
 Description: Use eatmydata in btrfs to fast install and update packages
 
